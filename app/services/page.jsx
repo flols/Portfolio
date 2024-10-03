@@ -8,13 +8,13 @@ const services = [
     {
         num: "01",
         title: "Development Front",
-        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        description: "En tant que développeur front-end, je me charge de créer des interfaces utilisateur attrayantes et intuitives. Mon rôle est de transformer des maquettes en éléments interactifs avec des technologies comme HTML, CSS et JavaScript, tout en optimisant l'expérience utilisateur sur différents appareils. J'assure également la compatibilité entre navigateurs et l'optimisation des performances visuelles.",
         href: "/"
     },
     {
         num: "02",
         title: "Development Back",
-        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        description: "En tant que développeur back-end, je m'occupe de la gestion des serveurs, des bases de données et de la logique métier. Mon travail consiste à rendre le système sécurisé, performant et capable de communiquer avec le front-end. J'utilise des langages comme Python, Node.js ou PHP, et je mets en place des bases de données comme MySQL ou MongoDB.",
         href: "/"
     },
      

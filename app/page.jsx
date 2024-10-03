@@ -6,8 +6,9 @@ import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 
-
 const Home = () => {
+  const cvUrl = "/assets/CV/Florian_Le_Saint_CV.pdf"; // Chemin correct vers votre CV
+
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
@@ -20,19 +21,23 @@ const Home = () => {
               <span className="text-accent">Florian Le Saint</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Développeur web sérieux et rigoureux, j’aime travailler en équipe et faisant
+            preuve de persévérance dans mes projets. Je suis en quête de nouvelles
+            connaissances et technologies, je suis déterminé à relever des défis et à
+            améliorer continuellement mes compétences.
             </p>
             {/* button and social */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
-              >
-                <span>Download CV</span>
-                <FiDownload className="text-xl" />
-              </Button>
+              <a href={cvUrl} download="Florian_Le_Saint_CV.pdf">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="uppercase flex items-center gap-2"
+                >
+                  <span>Télécharger mon CV</span>
+                  <FiDownload className="text-xl" />
+                </Button>
+              </a>
               <div className="mb-8 xl:mb-0">
                 <Social 
                   containerStyles="flex gap-6"
@@ -49,7 +54,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Stats />
+      {/*<Stats />*/}
     </section>
   );
 };
