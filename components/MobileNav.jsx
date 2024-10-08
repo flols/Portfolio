@@ -8,23 +8,23 @@ import { useState, useEffect } from "react";
 
 const links = [
   {
-    name: "home",
+    name: "Accueil",
     path: "/",
   },
   {
-    name: "services",
+    name: "Services",
     path: "/services",
   },
   {
-    name: "resume",
+    name: "À Propos",
     path: "/resume",
   },
   {
-    name: "work",
+    name: "Projets",
     path: "/work",
   },
   {
-    name: "contact",
+    name: "Contact",
     path: "/contact",
   },
 ];
