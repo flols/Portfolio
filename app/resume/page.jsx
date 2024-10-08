@@ -21,7 +21,7 @@ import {
 } from "react-icons/si";
 
 const abouts = {
-  title: "A propos",
+  title: "À propos",
   info: [
     {
       fieldName: "Nom",
@@ -38,6 +38,10 @@ const abouts = {
     {
       fieldName: "Téléphone",
       fieldValue: "06 68 46 13 07",
+    },
+    {
+      fieldName: "Localisation",
+      fieldValue: "Rennes, projet de déménagement",
     },
     {
       fieldName: "Langues",
@@ -79,7 +83,7 @@ const experiences = {
 
 const educations = {
   icon: "/assets/resume/badge.svg",
-  title: "Expériences",
+  title: "Éducation",
   items: [
     {
       institution: "Lycée Sacré Coeur La Salle",
@@ -89,12 +93,12 @@ const educations = {
     {
       institution: "EPSI - Brest Open Campus",
       degree: "Bachelor Informatique - titre CDA", 
-      duration: "2019- 2022",
+      duration: "2019 - 2022",
     },
     {
       institution: "MBA - MyDigitalSchool",
       degree: "Master Développeur Fullstack",
-      duration: "2019- 2022",
+      duration: "2019 - 2022",
     },
   ],
 };
@@ -201,9 +205,6 @@ const Resume = () => {
                 <h3 className="text-4xl font-bold">
                   {experiences.title}
                 </h3>
-                {/*<p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {experiences.description}
-                </p>*/}
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experiences.items.map((item, index) => {
@@ -227,9 +228,6 @@ const Resume = () => {
                 <h3 className="text-4xl font-bold">
                   {educations.title}
                 </h3>
-                {/*<p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {experiences.description}
-                </p>*/}
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {educations.items.map((item, index) => {
@@ -248,15 +246,12 @@ const Resume = () => {
                 </ScrollArea>
               </div>
             </TabsContent>
-            <TabsContent value="skills" className="w-full h-full">
+            <TabsContent value="skills" className="w-full">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl" font-bold>
+                  <h3 className="text-4xl font-bold">
                     {skills.title}
                   </h3>
-                  {/*<p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {experiences.description}
-                </p>*/}
                 </div>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
                   {skills.skillList.map((skill, index) => {
@@ -285,9 +280,6 @@ const Resume = () => {
                 <h3 className="text-4xl font-bold">
                   {abouts.title}
                 </h3>
-                {/*<p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {experiences.description}
-                </p>*/}
                 <ul className="grid grid-cols-1 gap-6 max-w-[620px] mx-auto xl:mx-0">
                   {abouts.info.map((item, index) => {
                     return (
