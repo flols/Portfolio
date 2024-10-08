@@ -4,10 +4,9 @@ import { FiDownload } from "react-icons/fi";
 // components
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
-import Stats from "@/components/Stats";
 
 const Home = () => {
-  const cvUrl = "/assets/CV/Florian_Le_Saint_CV.pdf"; // Chemin correct vers votre CV
+  const cvUrl = "/assets/CV/Florian_Le_Saint_CV.pdf";
 
   return (
     <section className="h-full">
@@ -15,7 +14,7 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Developpeur Web</span>
+            <span className="text-xl">Développeur Web</span>
             <h1 className="h1 mb-6">
               Bonjour, je suis <br />
               <span className="text-accent">Florian Le Saint</span>
@@ -54,7 +53,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/*<Stats />*/}
     </section>
   );
 };
