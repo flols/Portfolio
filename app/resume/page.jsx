@@ -92,7 +92,7 @@ const educations = {
     },
     {
       institution: "EPSI - Brest Open Campus",
-      degree: "Bachelor Informatique - titre CDA", 
+      degree: "Bachelor Informatique - titre CDA",
       duration: "2019 - 2022",
     },
     {
@@ -202,16 +202,19 @@ const Resume = () => {
           <div className="min-h-[70vh] w-full">
             <TabsContent value="experiences" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">
-                  {experiences.title}
-                </h3>
+                <h3 className="text-4xl font-bold">{experiences.title}</h3>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experiences.items.map((item, index) => {
                       return (
-                        <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+                        <li
+                          key={index}
+                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        >
                           <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
+                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                            {item.position}
+                          </h3>
                           <div className="flex items-center gap-3">
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                             <p className="text-white/60">{item.company}</p>
@@ -224,17 +227,20 @@ const Resume = () => {
               </div>
             </TabsContent>
             <TabsContent value="educations" className="w-full">
-            <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">
-                  {educations.title}
-                </h3>
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-bold">{educations.title}</h3>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {educations.items.map((item, index) => {
                       return (
-                        <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+                        <li
+                          key={index}
+                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        >
                           <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
+                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                            {item.degree}
+                          </h3>
                           <div className="flex items-center gap-3">
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                             <p className="text-white/60">{item.institution}</p>
@@ -249,9 +255,7 @@ const Resume = () => {
             <TabsContent value="skills" className="w-full">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold">
-                    {skills.title}
-                  </h3>
+                  <h3 className="text-4xl font-bold">{skills.title}</h3>
                 </div>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
                   {skills.skillList.map((skill, index) => {
@@ -265,30 +269,37 @@ const Resume = () => {
                               </div>
                             </TooltipTrigger>
                             <TooltipContent>
-                              <p className="capitalize bg-[#ffffff] rounded-xl px-2 py-1 text-primary text-[14px]">{skill.name}</p>
+                              <p className="capitalize bg-[#ffffff] rounded-xl px-2 py-1 text-primary text-[14px]">
+                                {skill.name}
+                              </p>
                             </TooltipContent>
                           </Tooltip>
                         </TooltipProvider>
                       </li>
                     );
-                  } )}
+                  })}
                 </ul>
               </div>
             </TabsContent>
-            <TabsContent value="abouts" className="w-full text-center xl:text-left">
+            <TabsContent
+              value="abouts"
+              className="w-full text-center xl:text-left"
+            >
               <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold">
-                  {abouts.title}
-                </h3>
-                <ul className="grid grid-cols-1 gap-6 max-w-[620px] mx-auto xl:mx-0">
+                <h3 className="text-4xl font-bold">{abouts.title}</h3>
+                <ul className="grid grid-cols-1 gap-6 max-w-[620px] mx-auto xl:mx-0 break-words">
                   {abouts.info.map((item, index) => {
                     return (
-                      <li 
+                      <li
                         key={index}
-                        className="flex items-center justify-center xl:justify-start gap-4"  
+                        className="flex items-center justify-center xl:justify-start gap-4"
                       >
-                        <span className="text-white/60">{item.fieldName}</span>
-                        <span className="text-xl">{item.fieldValue}</span>
+                        <span className="text-white/60 whitespace-nowrap">
+                          {item.fieldName}
+                        </span>
+                        <span className="text-xl break-all">
+                          {item.fieldValue}
+                        </span>
                       </li>
                     );
                   })}
