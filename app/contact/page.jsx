@@ -97,56 +97,70 @@ const Contact = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
+            >
               <h3 className="text-4xl text-accent">Travaillons ensemble !</h3>
               <p className="text-white/60">
-              Si vous pensez que je pourrais bien m'intégrer à votre équipe ou si vous souhaitez obtenir davantage d'informations me concernant, n'hésitez pas à m'envoyer un e-mail. Je serai heureux de vous répondre !              </p>
+                Si vous pensez que je pourrais bien m'intégrer à votre équipe ou
+                si vous souhaitez obtenir davantage d'informations me
+                concernant, n'hésitez pas à m'envoyer un e-mail. Je serai
+                heureux de vous répondre !{" "}
+              </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input 
-                  type="text" 
-                  name="firstname" 
-                  placeholder="Prénom" 
-                  value={formData.firstname} 
-                  onChange={handleChange} 
+                <Input
+                  type="text"
+                  name="firstname"
+                  placeholder="Prénom"
+                  value={formData.firstname}
+                  onChange={handleChange}
                 />
-                <Input 
-                  type="text" 
-                  name="lastname" 
-                  placeholder="Nom" 
-                  value={formData.lastname} 
-                  onChange={handleChange} 
+                <Input
+                  type="text"
+                  name="lastname"
+                  placeholder="Nom"
+                  value={formData.lastname}
+                  onChange={handleChange}
                 />
-                <Input 
-                  type="email" 
-                  name="email" 
-                  placeholder="Email" 
-                  value={formData.email} 
-                  onChange={handleChange} 
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={handleChange}
                 />
-                <Input 
-                  type="phone" 
-                  name="phone" 
-                  placeholder="Téléphone" 
-                  value={formData.phone} 
-                  onChange={handleChange} 
+                <Input
+                  type="phone"
+                  name="phone"
+                  placeholder="Téléphone"
+                  value={formData.phone}
+                  onChange={handleChange}
                 />
               </div>
-              <Textarea 
-                name="message" 
-                className="h-[200px]" 
-                placeholder="Message" 
-                value={formData.message} 
-                onChange={handleChange} 
+              <Textarea
+                name="message"
+                className="h-[200px]"
+                placeholder="Message"
+                value={formData.message}
+                onChange={handleChange}
               />
-              <Button size="md" className="max-w-40" type="submit" disabled={isLoading}>
-                {isLoading ? 'Envoi en cours...' : 'Envoyer'}
+              <Button
+                size="md"
+                className="max-w-40"
+                type="submit"
+                disabled={isLoading}
+              >
+                {isLoading ? "Envoi en cours..." : "Envoyer"}
               </Button>
-              {success && <p className="text-green-500">Message envoyé avec succès !</p>}
+              {success && (
+                <p className="text-green-500">Message envoyé avec succès !</p>
+              )}
               {error && <p className="text-red-500">{error}</p>}
             </form>
           </div>
           <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
-            <ul className="flex flex-col gap-10">
+            <ul className="flex flex-col gap-10 break-words">
               {info.map((item, index) => {
                 return (
                   <li key={index} className="flex items-center gap-6">
@@ -154,8 +168,10 @@ const Contact = () => {
                       <div className="text-[28px]">{item.icon}</div>
                     </div>
                     <div className="flex-1">
-                      <p className="text-white/60">{item.title}</p>
-                      <h3 className="text-xl">{item.description}</h3>
+                      <p className="text-white/60 whitespace-nowrap">
+                        {item.title}
+                      </p>
+                      <h3 className="text-xl break-all">{item.description}</h3>
                     </div>
                   </li>
                 );
