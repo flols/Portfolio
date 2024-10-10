@@ -41,7 +41,7 @@ const abouts = {
     },
     {
       fieldName: "Localisation",
-      fieldValue: "Rennes, projet de déménagement",
+      fieldValue: "Projet de déménagement à Aix-en-Provence",
     },
     {
       fieldName: "Langues",
