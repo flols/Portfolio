@@ -10,6 +10,8 @@ import {
   FaGithub,
   FaPython,
   FaDocker,
+  FaSymfony,
+  FaPhp,
 } from "react-icons/fa";
 
 import {
@@ -18,6 +20,8 @@ import {
   SiMongodb,
   SiTypescript,
   SiNuxtdotjs,
+  SiMysql,
+  SiFlutter
 } from "react-icons/si";
 
 const abouts = {
@@ -41,7 +45,7 @@ const abouts = {
     },
     {
       fieldName: "Localisation",
-      fieldValue: "Projet de déménagement à Rennes",
+      fieldValue: "Disponible dans toute la France",
     },
     {
       fieldName: "Langues",
@@ -162,6 +166,22 @@ const skills = {
     {
       icon: <SiTailwindcss />,
       name: "Tailwind CSS",
+    },
+    {
+      icon: <FaSymfony />,
+      name: "Symfony",
+    },
+    {
+      icon: <FaPhp />,
+      name: "PHP",
+    },
+    {
+      icon: <SiMysql />,
+      name: "MySQL",
+    },
+    {
+      icon: <SiFlutter />,
+      name: "Flutter",
     },
   ],
 };

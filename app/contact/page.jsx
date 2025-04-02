@@ -21,7 +21,7 @@ const info = [
   {
     icon: <FaMapMarkedAlt />,
     title: "Adresse",
-    description: "Rennes, 35000, France",
+    description: "Guingamp, 22200, France",
   },
 ];
 
