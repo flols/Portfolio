@@ -19,10 +19,11 @@ module.exports = {
       lg: "960px",
       xl: "1200px",
     },
-    fontFamily: {
-      primary: "var(--font-jetbrainsMono)",
-    },
+    fontFamily: {},
     extend: {
+      fontFamily: {
+        primary: ["var(--font-jetbrainsMono)", "monospace"],
+      },
 
       colors: {
         primary: '#1c1c22',

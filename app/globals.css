@@ -4,19 +4,43 @@
   
 @layer base {
     body {
-        @apply font-primary bg-primary text-white leading-loose;
+        font-family: var(--font-jetbrainsMono), monospace;
+        background-color: #1c1c22;
+        color: #fff;
+        line-height: 1.75;
     }
 
     .h1 {
-        @apply text-[48px] xl:text-[70px] leading-[1.1] font-semibold;
+        font-size: 48px;
+        line-height: 1.1;
+        font-weight: 600;
+    }
+    @media (min-width: 1200px) {
+        .h1 {
+            font-size: 70px;
+        }
     }
 
     .h2 {
-        @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+        font-size: 36px;
+        line-height: 1.1;
+        font-weight: 600;
+    }
+    @media (min-width: 1200px) {
+        .h2 {
+            font-size: 48px;
+        }
     }
 
     .h3 {
-        @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+        font-size: 20px;
+        line-height: 1.1;
+        font-weight: 600;
+    }
+    @media (min-width: 1200px) {
+        .h3 {
+            font-size: 24px;
+        }
     }
 
     .text-outline {
