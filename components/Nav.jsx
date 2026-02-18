@@ -29,14 +29,16 @@ const Nav = () => {
       {links.map((link, index) => {
         return (
             <Link 
-                href={link.path} 
-                key={index}
-                className={`${
-                    link.path === pathname && "text-accent border-b-2 border-accent"
-                } capitalize font-medium hover:text-accent transition-all`}
+              href={link.path} 
+              key={index}
+              className={`$${
+                link.path === pathname && "text-accent border-b-2 border-accent"
+              } capitalize font-medium hover:text-accent transition-all`}
+              aria-current={link.path === pathname ? "page" : undefined}
+              aria-label={link.name}
             >
-                {link.name}
-          </Link>
+              {link.name}
+            </Link>
         );
       })}
     </nav>

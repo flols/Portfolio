@@ -35,8 +35,9 @@ const Photo = () => {
             priority
             quality={100}
             fill
-            alt=""
+            alt="Portrait de Florian Le Saint, développeur web"
             className="object-contain"
+            sizes="(max-width: 768px) 298px, 498px"
           />
         </motion.div>
 

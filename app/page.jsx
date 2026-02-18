@@ -20,29 +20,34 @@ const Home = () => {
               <span className="text-accent">Florian Le Saint</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-            Développeur web sérieux et rigoureux, j’aime travailler en équipe et faisant
-            preuve de persévérance dans mes projets. Je suis en quête de nouvelles
-            connaissances et technologies, je suis déterminé à relever des défis et à
-            améliorer continuellement mes compétences.
+              Développeur web sérieux et rigoureux, j’aime travailler en équipe
+              et faisant preuve de persévérance dans mes projets. Je suis en
+              quête de nouvelles connaissances et technologies, je suis
+              déterminé à relever des défis et à améliorer continuellement mes
+              compétences.
             </p>
             {/* button and social */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <a href={cvUrl} download="Florian_Le_Saint_CV.pdf">
+              <a
+                href={cvUrl}
+                download="Florian_Le_Saint_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Télécharger le CV de Florian Le Saint (PDF)"
+              >
                 <Button
                   variant="outline"
                   size="lg"
                   className="uppercase flex items-center gap-2"
                 >
                   <span>Télécharger mon CV</span>
-                  <FiDownload className="text-xl" />
+                  <FiDownload className="text-xl" aria-hidden="true" />
                 </Button>
               </a>
               <div className="mb-8 xl:mb-0">
-                <Social 
+                <Social
                   containerStyles="flex gap-6"
-                  iconStyles="w-9 h-9 border border-accent rounded-full flex 
-                  justify-center items-center text-accent text-base hover:bg-accent
-                  hover:text-primary hover:transition-all duration-500"
+                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
                 />
               </div>
             </div>

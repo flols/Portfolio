@@ -47,7 +47,7 @@ const MobileNav = () => {
       </SheetTrigger>
       <SheetContent className="flex flex-col">
         <div className="mt-32 mb-40 text-center text-2xl">
-          <Link href="/">
+          <Link href="/" aria-label="Accueil - Florian Le Saint">
             <h1 className="text-4xl font-semibold">
               Florian<span className="text-accent">.</span>
             </h1>
@@ -60,11 +60,13 @@ const MobileNav = () => {
               <Link
                 href={link.path}
                 key={index}
-                className={`${
+                className={`$${
                   link.path === pathname &&
                   "text-accent border-b-2 border-accent"
                 } text-xl capitalize hover:text-accent transition-all`}
                 onClick={() => setIsOpen(false)}
+                aria-current={link.path === pathname ? "page" : undefined}
+                aria-label={link.name}
               >
                 {link.name}
               </Link>
